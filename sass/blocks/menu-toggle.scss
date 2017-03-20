@@ -1,0 +1,31 @@
+.menu-toggle {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  transform: translateY(-22px / 2);
+  cursor: pointer;
+}
+
+.menu-toggle--close {
+  background-image: url("../img/icon-cross.svg");
+}
+
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}

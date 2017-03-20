@@ -1,0 +1,28 @@
+.btn {
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  background-color: $main-theme;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: #88b6d1;
+
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    color: inherit;
+
+    background-color: #e5e5e5;
+  }
+}
