@@ -1,0 +1,98 @@
+.offer {
+  @include container;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  font-family: $font-stack;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  color: $font-color-light;
+}
+
+
+.offer__header {
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  text-align: left;
+}
+
+.offer__title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.offer__subtitle {
+  display: block;
+
+  color: #63d1bb;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.offer__about {
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.offer__features {
+  width: 100%;
+  line-height: 20px;
+  margin-bottom: 27px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.offer__row {
+  height: 39px;
+  border-bottom: 1px solid #ececec;
+}
+
+.offer__cell {
+  text-align: left;
+  vertical-align: middle;
+
+  &:first-child {
+    width: 38%;
+  }
+}
+
+.offer__img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.offer__img img {
+  width: 100%;
+  height: auto;
+}
+
+.offer__price {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.offer__btn {
+  @include btn;
+  height: 52px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}

@@ -1,0 +1,25 @@
+.divider {
+  position: relative;
+
+  width: 100%;
+  min-height: 7px;
+  margin: auto;
+
+  border: none;
+ /* background-image: url("../img/???.svg");*/
+  background-size: 100% 7px;
+  background-color: #f1f1f1;
+
+  @media #{$tablet} {
+    min-height: 17px;
+
+    background-size: 100% 17px;
+  }
+
+  @media #{$desktop} {
+    min-height: 23px;
+
+    background-size: 100% 23px;
+  }
+}
+
