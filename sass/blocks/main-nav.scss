@@ -1,0 +1,154 @@
+.main-nav {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  background-color: #fff;
+  transition: transform 800ms ease;
+}
+
+.main-nav--nojs {
+  position: relative;
+  top: 0px;
+}
+
+.main-nav--nojs ~ .menu-toggle {
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  height: 79px;
+  border-top: 1px solid #ececec;
+}
+
+.main-nav__logo {
+  display: none;
+}
+
+.main-nav__link {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 23.75%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+
+  fill-opacity: 0.2;
+}
+
+@media #{$mobile-only} {
+  .main-nav--closed {
+    top: -320px;
+  }
+
+  .main-nav--open {
+    transform: translateY(399px);
+  }
+}
+
+@media #{$tablet} {
+  .main-nav {
+    width: auto;
+    position: relative;
+    top: 0;
+  }
+
+  .main-nav__list {
+    flex-flow: row nowrap;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .main-nav__item {
+    border-top-width: 0;
+    min-height: 88px;
+
+    &--search {
+      width: 83px;
+      padding: 0;
+      font-size: 0;
+      border-left: 1px solid #ececec;
+    }
+
+    &--cart {
+      border-left: 1px solid #ececec;
+    }
+  }
+
+  .main-nav__link {
+    width: auto;
+    padding: 0;
+
+    &--cart {
+      padding-left: 82px;
+    }
+
+  }
+
+  .main-nav__icon {
+
+    &--search {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--cart {
+      left: 30px;
+    }
+  }
+
+}
+
+@media #{$desktop} {
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .main-nav__list {
+    &:first-child {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  .main-nav__item {
+
+    &--catalog {
+      padding-left: 0;
+      padding-right: 35px;
+    }
+
+    &--form {
+      padding-left: 35px;
+      border-left: 1px solid #ececec;
+    }
+  }
+}
