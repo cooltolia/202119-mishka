@@ -9,14 +9,14 @@
   flex-flow: column nowrap;
 
   font-family: $font-stack;
-  font-size: 15px;
   font-weight: normal;
-  line-height: 24px;
   color: $font-color-light;
 }
 
 
 .offer__header {
+  box-sizing: border-box;
+  padding-top: 30px;
   margin-bottom: 25px;
 
   font-weight: bold;
@@ -26,6 +26,8 @@
 .offer__title {
   display: block;
   margin-bottom: 5px;
+
+  color: $font-color-dark;
   font-size: 25px;
   line-height: 30px;
 }
@@ -36,6 +38,7 @@
   color: #63d1bb;
   font-size: 17px;
   line-height: 20px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -46,6 +49,8 @@
 
 .offer__features {
   width: 100%;
+
+  font-size: 15px;
   line-height: 20px;
   margin-bottom: 27px;
   border-spacing: 0;
@@ -95,4 +100,118 @@
 
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media #{$tablet} {
+  .offer {
+//    max-width: 950px;
+    margin-bottom: 52px;
+  }
+
+  .offer__header {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .offer__title {
+    font-size: 43px;
+    line-height: 50px;
+
+    margin-bottom: 0;
+  }
+
+  .offer__subtitle {
+    width: 70px;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .offer__content {
+    display: flex;
+    flex-flow: column wrap;
+
+    height: 404px; // высота правой колонки/картинки
+  }
+
+  .offer__about,
+  .offer__features,
+  .offer__price,
+  .offer__btn {
+    width: 43.7%;
+    margin-right: 44px;
+  }
+
+  .offer__about {
+    margin-bottom: 50px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .offer__price {
+    margin-top: auto;
+    margin-bottom: 32px;
+
+    font-size: 20px;
+  }
+
+  .offer__img {
+    width: 333px;
+    height: 404px;
+    order: 1;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media #{$desktop} {
+  .offer {
+    margin-bottom: 73px;
+  }
+
+  .offer__header {
+    padding: 0;
+    margin-bottom: 10px;
+    padding-left: 47px;
+    justify-content: flex-start;
+
+    top: 117px;
+  }
+
+  .offer__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .offer__subtitle {
+    order: -1;
+    margin-right: 58px;
+  }
+
+  .offer__content {
+    height: 636px; // высота правой колонки/картинки
+  }
+
+  .offer__about,
+  .offer__features,
+  .offer__price,
+  .offer__btn {
+    width: 292px;
+    margin-right: 58px;
+    margin-left: 175px;
+  }
+
+  .offer__about {
+    margin-top: 160px;
+  }
+
+  .offer__img {
+    width: 525px;
+    height: 636px;
+  }
 }

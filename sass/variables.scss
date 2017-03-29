@@ -26,6 +26,7 @@ $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
   @media #{$desktop} {
     width: 1150px;
+    padding: 0 50px;
 //    max-width: 1360px;
   }
 }
@@ -41,7 +42,7 @@ $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
   outline: none;
   cursor: pointer;
 
-  transition: background-color 300ms ease, color 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease, border-color 150ms ease;
 
   font-size: 17px;
   font-weight: bold;
@@ -55,6 +56,10 @@ $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
   &:active {
     background-color: $font-color-light;
     color: rgba(#fff, 0.3);
+  }
+
+  &:focus {
+    border-color: #63d1bb;
   }
 
  /* &:disabled {

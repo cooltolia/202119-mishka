@@ -75,42 +75,42 @@
         <div class="form__fieldset form__fieldset--radio">
           <h2 class="form__legend">Тип</h2>
           <div class="form__field form__field--radio">
-            <div class="form__input">
+            <div class="form__input form__input--radio">
               <input class="form__radio" name="type" id="type1" type="radio" value="	accessory" checked>
               <label class="form__label form__label--radio" for="type1">Аксессуар для интерьера</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--radio">
               <input class="form__radio" name="type" id="type2" type="radio" value="toy">
               <label class="form__label form__label--radio" for="type2">Детская игрушка</label>
             </div>
           </div>
         </div>
       </div>
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--grey">
         <div class="form__fieldset form__fieldset--checkbox">
           <h2 class="form__legend">Цвет</h2>
           <div class="form__field form__field--checkbox">
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color1" type="checkbox" value="white" checked>
               <label class="form__label form__label--checkbox" for="color1">Белый</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color2" type="checkbox" value="grey" checked>
               <label class="form__label form__label--checkbox" for="color2">Серый</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color3" type="checkbox" value="tiffany">
               <label class="form__label form__label--checkbox" for="color3">«Тиффани»</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color4" type="checkbox" value="black">
               <label class="form__label form__label--checkbox" for="color4">Черный</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color5" type="checkbox" value="pink">
               <label class="form__label form__label--checkbox" for="color5">Розовый</label>
             </div>
-            <div class="form__input">
+            <div class="form__input form__input--checkbox">
               <input class="form__checkbox" name="color" id="color6" type="checkbox" value="orange">
               <label class="form__label form__label--checkbox" for="color6">Оранжевый</label>
             </div>
@@ -136,8 +136,8 @@
           </div>
         </div>
       </div>
-      <div class="form__wrapper">
-        <div class="form__fieldset form__fieldser--tel">
+      <div class="form__wrapper form__wrapper--grey">
+        <div class="form__fieldset form__fieldset--tel">
           <h2 class="form__legend">Тел</h2>
           <div class="form__field form__field--tel">
             <input class="form__tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
@@ -146,9 +146,7 @@
             </svg>
           </div>
         </div>
-      </div>
-      <div class="form__wrapper">
-        <div class="form__fieldset form__fieldser--email">
+        <div class="form__fieldset form__fieldset--email">
           <h2 class="form__legend">E-mail</h2>
           <div class="form__field form__field--email">
             <input class="form__email" type="email" name="email" placeholder="Ваш Email*" required>
@@ -173,34 +171,34 @@
   </main>
 
   <footer class="main-footer">
-   <div class="main-footer__inner">
+    <div class="main-footer__inner">
       <div class="main-footer__logo">
-      <img src="" alt="Logo">
+        <img src="img/logo-mobile.svg" alt="Logo">
+      </div>
+      <div class="main-footer__socials socials">
+        <a class="socials__link" href="#">
+          <svg class="socials__icon" width="22" height="21">
+            <use xlink:href="img/map.svg#icon-insta"></use>
+          </svg>
+        </a>
+        <a class="socials__link" href="#">
+          <svg class="socials__icon" width="15" height="29">
+            <use xlink:href="img/map.svg#icon-fb"></use>
+          </svg>
+        </a>
+        <a class="socials__link" href="#">
+          <svg class="socials__icon" width="24" height="20">
+            <use xlink:href="img/map.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </div>
+      <a class="main-footer__copyright" href="#">
+        <span class="main-footer__copyright-title">Разработано</span>
+        <svg class="main-footer__copyright-logo" width="27" height="34">
+          <use xlink:href="img/map.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
     </div>
-    <div class="main-footer__socials socials">
-      <a class="socials__link" href="#">
-        <svg class="socials__icon" width="22" height="21">
-          <use xlink:href="img/map.svg#icon-insta"></use>
-        </svg>
-      </a>
-      <a class="socials__link" href="#">
-        <svg class="socials__icon" width="15" height="29">
-          <use xlink:href="img/map.svg#icon-fb"></use>
-        </svg>
-      </a>
-      <a class="socials__link" href="#">
-        <svg class="socials__icon" width="24" height="20">
-          <use xlink:href="img/map.svg#icon-twitter"></use>
-        </svg>
-      </a>
-    </div>
-    <a class="main-footer__copyright" href="#">
-      <span class="main-footer__copyright-title">Разработано</span>
-      <svg class="main-footer__copyright-logo" width="27" height="34">
-        <use xlink:href="img/map.svg#icon-htmlacademy"></use>
-      </svg>
-    </a>
-   </div>
   </footer>
   <script src="js/script.js"></script>
 </body>

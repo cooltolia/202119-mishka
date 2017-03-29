@@ -46,3 +46,34 @@
   height: 34px;
   fill: #63d1bb
 }
+
+@media #{$tablet} {
+  .main-footer__inner {
+    min-height: 143px;
+    padding: 0 50px;
+
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .main-footer__logo {
+    display: block;
+    width: 102px;
+    height: 34px;
+    margin-right: 23.8%;
+  }
+
+  .main-footer__socials {
+    border-bottom: none;
+  }
+
+  .main-footer__copyright {
+    margin-left: auto;
+  }
+}
+
+@media #{$desktop} {
+   .main-footer__logo {
+     margin-right: 33.24%;
+  }
+}

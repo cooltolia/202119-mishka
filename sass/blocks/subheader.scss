@@ -1,8 +1,6 @@
 .subheader {
   @include container;
 
-  margin-bottom: 30px;
-
   font-family: $font-stack;
   font-size: 15px;
   line-height: 24px;
@@ -56,7 +54,8 @@
 }
 
 .subheader__title {
-  width: 250px;
+  @include container;
+
   margin: 0 auto;
   padding: 69px 0 76px;
   font-size: 27px;
@@ -65,12 +64,15 @@
   text-align: center;
 
   &--index {
-    margin-bottom: 46px;
+    min-width: 250px;
+    max-width: 250px;
+    padding-bottom: 120px;
   }
 }
 
 .subheader__promo {
   @include container;
+  position: relative;
 
   display: flex;
   flex-flow: column nowrap;
@@ -123,13 +125,52 @@
   }
 
   .subheader__nav {
-    padding-top: 25px;
+    padding-top: 20px;
   }
 
   .subheader__nav-item {
     &:nth-child(-n+2) {
       display: block;
     }
+  }
+
+  .subheader__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 51px 50px 80px;
+
+    &--index {
+      min-width: 768px;
+      max-width: 1150px;
+
+      padding-top: 114px;
+      padding-bottom: 371px;
+    }
+  }
+
+  .subheader__promo {
+    flex-direction: row;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: -50px;
+      bottom: 0;
+      height: 24px;
+      z-index: 9;
+
+      background-image: url("/img/zigzag.png");
+      background-size: 100% 24px;
+      background-position: bottom -10px center;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  .subheader__promo-item {
+    flex-grow: 1;
+    min-height: 119px;
   }
 }
 
@@ -142,5 +183,11 @@
     &:nth-child(n+3) {
       display: block;
     }
+  }
+
+  .subheader__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 50px 50px 103px;
   }
 }
