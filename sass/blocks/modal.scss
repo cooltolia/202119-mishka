@@ -1,13 +1,13 @@
 .modal {
   position: fixed;
   z-index: 200;
-  display: none;
+  opacity: 0;
+  transform: translateX(-9999px);
 
   box-sizing: border-box;
   width: 320px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   padding: 30px 30px 47px;
 
   background-color: #fff;
@@ -16,8 +16,12 @@
 
   font-family: $font-stack;
 
+  transition: opacity 500ms ease;
+
   &--open {
-    display: block;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
   }
 }
 
@@ -121,6 +125,7 @@
   height: 100%;
 
   background-color: rgba(#fff, 0.9);
+  transition: background-color 3300ms ease;;
 }
 
 @media #{$tablet} {
