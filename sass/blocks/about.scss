@@ -4,7 +4,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 30px 30px 0;
-  margin-bottom: 55px;
+  margin-bottom: 58px;
 
   font-family: $font-stack;
   font-size: 17px;
@@ -14,7 +14,7 @@
 
 .about__title {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 8px;
   font-size: 25px;
   line-height: 30px;
   text-align: left;
@@ -90,6 +90,7 @@
   .about__item {
     width: 334px;
     margin-bottom: 28px;
+    padding-top: 85px;
 
     font-size: 20px;
     line-height: 22px;
@@ -125,12 +126,12 @@
 
 @media #{$desktop} {
   .about {
-    padding-top: 65px;
-    margin-bottom: 55px;
+    padding-top: 63px;
+    margin-bottom: 61px;
   }
 
    .about__title {
-    padding-left: 175px;
+    padding-left: 168px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -141,5 +142,6 @@
 
   .about__item {
     width: 350px;
+    padding-top: 84px;
   }
 }
