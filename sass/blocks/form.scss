@@ -1,5 +1,5 @@
 .form {
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 55px;
 
   font-family: $font-stack;
@@ -25,10 +25,22 @@
   @include container;
 
   padding: 0 30px;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 
   &--textarea {
     margin-bottom: 12px;
+  }
+
+  &--name {
+    margin-bottom: 31px;
+  }
+
+  &--tel {
+    margin-bottom: 31px;
+  }
+
+  &--email {
+    margin-bottom: 34px;
   }
 }
 
@@ -53,12 +65,25 @@
     left: 62px;
     background-color: currentColor;
   }
+
+  &--shorter::after {
+     width: calc(100% - 81px);
+     left: 81px;
+    }
 }
 
 .form__field {
   position: relative;
 
   margin-top: 26px;
+
+  &--tel {
+    margin-top: 7px;
+  }
+
+   &--email {
+    margin-top: 7px;
+  }
 }
 
 .form__input {
@@ -66,16 +91,16 @@
   flex-flow: row nowrap;
 
   &--radio {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &--checkbox {
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
   &--name {
     flex-direction: column;
-    margin-bottom: 36px;
+    margin-bottom: 23px;
   }
 
   &:last-child {
@@ -164,7 +189,7 @@ input[type="checkbox"] {
     padding: 0;
     width: auto;
     margin-right: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 }
 
@@ -182,9 +207,11 @@ input[type="checkbox"] {
 .form__email {
   box-sizing: border-box;
   width: 100%;
+  height: 52px;
   padding-right: 35px;
 
   border: 0;
+  border-bottom: 2px solid $font-color-dark;
   outline: 0;
   background-color: transparent;
 
@@ -192,6 +219,8 @@ input[type="checkbox"] {
   font-size: 17px;
   font-weight: normal;
   line-height: 18px;
+
+  transition: border-color 300ms ease;
 
   &::placeholder {
     color: rgba($font-color-light, 0.3);
@@ -201,10 +230,20 @@ input[type="checkbox"] {
   }
 }
 
+.form__text:hover,
+.form__text:focus,
+.form__tel:hover,
+.form__tel:focus,
+.form__email:hover,
+.form__email:focus {
+  border-color: #62d1ba;
+}
+
 .form__icon {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
 
   fill: rgba(#000, 0.2);
 
@@ -218,7 +257,6 @@ input[type="checkbox"] {
   &--email {
     width: 32px;
     height: 32px;
-    top: -4px;
   }
 }
 
@@ -245,6 +283,8 @@ input[type="checkbox"] {
   font-weight: normal;
   line-height: 18px;
 
+  transition: border-color 300ms ease;
+
   &::placeholder {
     color: rgba($font-color-light, 0.3);
     font-size: 19px;
@@ -253,11 +293,11 @@ input[type="checkbox"] {
   }
 
   &:hover {
-    border: 2px solid #62d1ba;
+    border-color: #62d1ba;
   }
 
   &:focus {
-    border: 2px solid #62d1ba;
+    border-color: #62d1ba;
   }
 }
 
@@ -292,12 +332,13 @@ input[type="checkbox"] {
 
 @media #{$tablet} {
   .form {
-    padding-top: 78px;
+    padding-top: 71px;
     padding-bottom: 50px;
   }
 
   .form__intro {
     padding-right: 105px;
+    margin-bottom: 4px;
 
     font-size: 17px;
     line-height: 30px;
@@ -309,6 +350,11 @@ input[type="checkbox"] {
 
     &--grey {
       background-color: #f1f1f1;
+    }
+
+    &--short {
+      padding-top: 51px;
+      padding-bottom: 50px;
     }
 
     &:nth-last-child(2) {
@@ -323,7 +369,16 @@ input[type="checkbox"] {
     align-items: baseline;
 
     &--tel {
-      margin-bottom: 55px;
+      margin-bottom: 22px;
+    }
+
+    &--name,
+    &--email {
+      margin-bottom: 0;
+    }
+
+    &--textarea {
+      margin-bottom: 15px;
     }
   }
 
@@ -361,14 +416,14 @@ input[type="checkbox"] {
       }
 
       &:nth-child(odd) {
-        margin-right: 6%;
+        margin-right: 5%;
       }
     }
 
     &--name {
       flex-direction: row;
       align-items: baseline;
-      margin-bottom: 50px;
+      margin-bottom: 24px;
     }
   }
 
@@ -418,6 +473,7 @@ input[type="checkbox"] {
 
     &--text {
       width: auto;
+      margin-right: 26px;
       margin-bottom: 0;
     }
   }
@@ -425,6 +481,8 @@ input[type="checkbox"] {
   .form__text,
   .form__tel,
   .form__email {
+    padding-left: 17px;
+
     font-size: 19px;
 
     &::placeholder {
@@ -434,6 +492,7 @@ input[type="checkbox"] {
 
   .form__textarea {
     margin-top: 0;
+    padding: 16px;
   }
 
   .form__icon {
@@ -462,12 +521,19 @@ input[type="checkbox"] {
 
 @media #{$desktop} {
   .form {
-    padding-top: 120px;
+    padding-top: 124px;
    }
 
   .form__intro {
     padding-right: 250px;
     padding-left: 225px;
+  }
+
+  .form__wrapper {
+
+    &--short {
+      padding-top: 51px;
+    }
   }
 
   .form__legend {
@@ -494,6 +560,10 @@ input[type="checkbox"] {
   }
 
   .form__fieldset {
+
+    &--textarea {
+      margin-bottom: 10px;
+    }
 
     &--textarea,
     &--name,

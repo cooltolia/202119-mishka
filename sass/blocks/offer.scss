@@ -17,7 +17,7 @@
 .offer__header {
   box-sizing: border-box;
   padding-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   font-weight: bold;
   text-align: left;
@@ -44,7 +44,10 @@
 
 .offer__about {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  line-height: 24px;
 }
 
 .offer__features {
@@ -52,7 +55,7 @@
 
   font-size: 15px;
   line-height: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -67,7 +70,7 @@
   vertical-align: middle;
 
   &:first-child {
-    width: 38%;
+    width: 33%;
   }
 }
 
@@ -75,10 +78,11 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 19px;
 }
 
 .offer__img img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -114,7 +118,8 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    padding-top: 46px;
+    margin-bottom: 48px;
   }
 
   .offer__title {
@@ -126,6 +131,8 @@
 
   .offer__subtitle {
     width: 70px;
+    padding-right: 28px;
+
     font-size: 17px;
     line-height: 17px;
     text-align: center;
@@ -147,7 +154,7 @@
   }
 
   .offer__about {
-    margin-bottom: 50px;
+    margin-bottom: 36px;
 
     font-size: 17px;
     line-height: 30px;
@@ -155,7 +162,7 @@
 
   .offer__price {
     margin-top: auto;
-    margin-bottom: 32px;
+    margin-bottom: 27px;
 
     font-size: 20px;
   }
@@ -180,7 +187,7 @@
     padding-left: 47px;
     justify-content: flex-start;
 
-    top: 117px;
+    top: 123px;
   }
 
   .offer__title {
@@ -190,7 +197,8 @@
 
   .offer__subtitle {
     order: -1;
-    margin-right: 58px;
+    margin-top: 8px;
+    margin-right: 24px;
   }
 
   .offer__content {
@@ -201,13 +209,24 @@
   .offer__features,
   .offer__price,
   .offer__btn {
+    box-sizing: border-box;
     width: 292px;
     margin-right: 58px;
     margin-left: 175px;
   }
 
   .offer__about {
-    margin-top: 160px;
+    margin-top: 162px;
+    margin-bottom: 48px;
+  }
+
+  .offer__price {
+    padding-left: 7px;
+    margin-bottom: 29px;
+  }
+
+  .offer__btn {
+    padding-left: 7px;
   }
 
   .offer__img {

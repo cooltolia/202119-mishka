@@ -50,6 +50,8 @@
 .subheader__nav-link {
   color: inherit;
   text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
   font-weight: bold;
 }
 
@@ -114,6 +116,7 @@
   width: 120px;
   color: #ffffff;
   font-size: 19px;
+  line-height: 24px;
   font-weight: bold;
 }
 
@@ -125,7 +128,7 @@
   }
 
   .subheader__nav {
-    padding-top: 20px;
+    padding-top: 17px;
   }
 
   .subheader__nav-item {
@@ -137,7 +140,7 @@
   .subheader__title {
     font-size: 43px;
     line-height: 50px;
-    padding: 51px 50px 80px;
+    padding: 55px 50px 80px;
 
     &--index {
       min-width: 768px;
@@ -172,12 +175,37 @@
     flex-grow: 1;
     min-height: 119px;
   }
+
+  .subheader__promo-title {
+    margin-left: 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .subheader__promo-icon {
+
+    &--interior {
+      top: 30px;
+    }
+
+    &--toy {
+      top: 33px;
+      right: 33px;
+    }
+  }
 }
 
 @media #{$desktop} {
   .subheader__nav-item {
+    margin-right: 62px;
+
     &:nth-child(-n+2) {
       display: none;
+    }
+
+    &:only-child {
+      display: block;
     }
 
     &:nth-child(n+3) {
@@ -189,5 +217,10 @@
     font-size: 53px;
     line-height: 57px;
     padding: 50px 50px 103px;
+
+    &--index {
+      padding-top: 113px;
+      padding-bottom: 358px;
+    }
   }
 }

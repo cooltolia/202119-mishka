@@ -10,7 +10,7 @@
 
 .promo__title {
   position: relative;
-  padding: 25px 30px 20px;
+  padding: 25px 30px 25px;
   padding-left: 90px;
   margin: 0;
 
@@ -63,7 +63,7 @@
 }
 
 .promo__content {
-  padding: 30px 34px 33px;
+  padding: 24px 34px 33px;
   border: 1px solid #ececec;
 }
 
@@ -99,6 +99,7 @@
   .promo__title {
     font-size: 20px;
     padding-left: 107px;
+    padding-top: 36px;
 
     border-bottom-width: 0px;
 
@@ -114,7 +115,7 @@
   }
 
   .promo__content {
-    padding: 11px 40px 46px;
+    padding: 7px 40px 46px;
     border-top-width: 0px;
   }
 
@@ -130,7 +131,7 @@
   .promo {
     flex-wrap: wrap;
     height: 455px; // высота левой колонки-видео
-    margin-bottom: 105px;
+    margin-bottom: 109px;
   }
 
   .promo__video {
@@ -140,14 +141,14 @@
   .promo__title {
     box-sizing: border-box;
     width: 368px;
-    padding-top: 95px;
-    padding-left: 80px;
+    padding-top: 98px;
+    padding-left: 77px;
     padding-right: 57px;
-    padding-bottom: 32px;
+    padding-bottom: 33px;
 
     &::before {
-      left: 80px;
-      top: 47px;
+      left: 79px;
+      top: 44px;
       transform: translateY(0);
     }
   }
@@ -156,13 +157,13 @@
     box-sizing: border-box;
     width: 368px;
     padding-top: 0;
-    padding-left: 80px;
+    padding-left: 77px;
     padding-right: 57px;
-    padding-bottom: 63px;
+    padding-bottom: 56px;
   }
 
   .promo__about {
-    margin-bottom: 43px;
+    margin-bottom: 46px;
   }
 
 }
