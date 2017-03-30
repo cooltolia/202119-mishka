@@ -16,7 +16,7 @@
 
 .offer__header {
   box-sizing: border-box;
-  padding-top: 30px;
+  padding-top: 28px;
   margin-bottom: 21px;
 
   font-weight: bold;
@@ -70,7 +70,7 @@
   vertical-align: middle;
 
   &:first-child {
-    width: 33%;
+    width: 38%;
   }
 }
 
@@ -78,7 +78,7 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
 }
 
 .offer__img img {
@@ -127,6 +127,7 @@
     line-height: 50px;
 
     margin-bottom: 0;
+    margin-left: -3px;
   }
 
   .offer__subtitle {
@@ -142,7 +143,7 @@
     display: flex;
     flex-flow: column wrap;
 
-    height: 404px; // высота правой колонки/картинки
+    height: 412px; // высота правой колонки/картинки (включая margin)
   }
 
   .offer__about,
@@ -151,6 +152,13 @@
   .offer__btn {
     width: 43.7%;
     margin-right: 44px;
+  }
+
+  .offer__cell {
+
+    &:first-child {
+      width: 33%;
+    }
   }
 
   .offer__about {
@@ -162,7 +170,7 @@
 
   .offer__price {
     margin-top: auto;
-    margin-bottom: 27px;
+    margin-bottom: 34px;
 
     font-size: 20px;
   }
@@ -172,6 +180,7 @@
     height: 404px;
     order: 1;
     margin: 0;
+    margin-top: 8px;
     margin-left: auto;
   }
 }
@@ -191,6 +200,8 @@
   }
 
   .offer__title {
+    margin-left: 0;
+
     font-size: 53px;
     line-height: 57px;
   }
@@ -202,7 +213,7 @@
   }
 
   .offer__content {
-    height: 636px; // высота правой колонки/картинки
+    height: 640px; // высота правой колонки/картинки
   }
 
   .offer__about,
@@ -222,7 +233,7 @@
 
   .offer__price {
     padding-left: 7px;
-    margin-bottom: 29px;
+    margin-bottom: 34px;
   }
 
   .offer__btn {
@@ -232,5 +243,7 @@
   .offer__img {
     width: 525px;
     height: 636px;
+
+    margin-top: 4px;
   }
 }

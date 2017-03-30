@@ -13,6 +13,11 @@
     background-repeat: no-repeat;
     background-position: center -20px;
     background-color: #fff;
+
+    @media #{$retina} {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px 373px;
+    }
   }
 }
 
@@ -68,7 +73,7 @@
   &--index {
     min-width: 250px;
     max-width: 250px;
-    padding-bottom: 120px;
+    padding-bottom: 123px;
   }
 }
 
@@ -125,6 +130,21 @@
     min-width: 100%;
     width: 100%;
     padding: 0;
+
+    background-image: url("/img/bg-zigzag-fill.svg");
+    background-size: 100% 24px;
+    background-position: center bottom -1px;
+    background-repeat: no-repeat;
+
+    &--index {
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-position: center 0;
+
+      @media #{$retina} {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1150px 746px;
+      }
+    }
   }
 
   .subheader__nav {
@@ -144,7 +164,7 @@
 
     &--index {
       min-width: 768px;
-      max-width: 1150px;
+      max-width: 900px;
 
       padding-top: 114px;
       padding-bottom: 371px;
@@ -158,14 +178,14 @@
       content: '';
       position: absolute;
       width: 100%;
-      left: -50px;
+      left: 0;
       bottom: 0;
-      height: 24px;
+      height: 23px;
       z-index: 9;
 
-      background-image: url("/img/zigzag.png");
-      background-size: 100% 24px;
-      background-position: bottom -10px center;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: cover;
+      background-position: bottom -12px center;
       background-repeat: no-repeat;
     }
 
@@ -197,6 +217,13 @@
 }
 
 @media #{$desktop} {
+  .subheader {
+    background-image: url("/img/bg-zigzag-fill.svg");
+    background-size: 100% 34px;
+    background-position: center bottom -20px;
+    background-repeat: no-repeat;
+  }
+
   .subheader__nav-item {
     margin-right: 62px;
 
@@ -222,5 +249,11 @@
       padding-top: 113px;
       padding-bottom: 358px;
     }
+  }
+
+  .subheader__promo::after {
+    height: 24px;
+
+    background-position: bottom -17px center;
   }
 }

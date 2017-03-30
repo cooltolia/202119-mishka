@@ -53,11 +53,19 @@
     width: 113px;
     height: 46px;
   }
+
+  .main-header__logo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media #{$desktop} {
   .main-header__logo {
     position: absolute;
+    width: 149px;
+    height: 72px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

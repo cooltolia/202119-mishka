@@ -1,7 +1,7 @@
 .promo {
   @include container;
   padding: 0 30px;
-  margin-bottom: 58px;
+  margin-bottom: 56px;
   display: flex;
   flex-flow: column nowrap;
 
@@ -43,6 +43,10 @@
   background-image: url("../img/video-mobile@1x.jpg");
   background-size: cover;
   background-color: #62d1ba;
+
+  @media #{$retina} {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .promo__video-control {
@@ -93,7 +97,7 @@
 
 @media #{$tablet} {
   .promo {
-    margin-bottom: 63px;
+    margin-bottom: 59px;
   }
 
   .promo__title {
@@ -105,6 +109,7 @@
 
     &::before {
       left: 42px;
+      transform: translateY(-40%);
     }
   }
 
@@ -112,6 +117,16 @@
     order: -1;
     padding-top: 0;
     height: 455px;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media #{$retina} {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .promo__video-control {
+    transform: translate(-50%, -45%);
   }
 
   .promo__content {
@@ -131,26 +146,36 @@
   .promo {
     flex-wrap: wrap;
     height: 455px; // высота левой колонки-видео
-    margin-bottom: 109px;
+    margin-bottom: 105px;
   }
 
   .promo__video {
     width: 682px;
+
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media #{$retina} {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 
   .promo__title {
     box-sizing: border-box;
     width: 368px;
-    padding-top: 98px;
+    padding-top: 95px;
     padding-left: 77px;
     padding-right: 57px;
     padding-bottom: 33px;
 
     &::before {
       left: 79px;
-      top: 44px;
+      top: 41px;
       transform: translateY(0);
     }
+  }
+
+  .promo__video-control {
+    transform: translate(-42%, -50%);
   }
 
   .promo__content {
@@ -159,11 +184,10 @@
     padding-top: 0;
     padding-left: 77px;
     padding-right: 57px;
-    padding-bottom: 56px;
+    padding-bottom: 59px;
   }
 
   .promo__about {
     margin-bottom: 46px;
   }
-
 }
