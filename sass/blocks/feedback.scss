@@ -67,6 +67,8 @@
   background-color: #fff;
   cursor: pointer;
 
+  font-size: 0;
+
   &:first-child {
     border-right: 1px solid #ececec;
   }
@@ -97,7 +99,7 @@
 
 @media #{$tablet} {
   .feedback {
-    padding-top: 80px;
+    padding-top: 79px;
     margin-bottom: 68px;
     display: flex;
     flex-flow: row wrap;
@@ -106,13 +108,18 @@
     background-image: url(../img/review@1x.jpg);
     background-size: 350px 100%;
     background-repeat: no-repeat;
-    background-position: top left -30px;
+    background-position: top left;
+
+    @media #{$retina} {
+      background-image: url(../img/review@2x.jpg)
+    }
   }
 
   .feedback__title {
     width: 50%;
     order: -2;
     margin-bottom: 49px;
+    margin-left: -5px;
 
     font-size: 43px;
     line-height: 50px;
@@ -121,7 +128,7 @@
 
   .feedback__content {
     width: 100%;
-    margin-bottom: 62px;
+    margin-bottom: 59px;
 
     font-size: 17px;
     line-height: 30px;
@@ -129,7 +136,7 @@
 
   .feedback__author {
     width: 334px;
-    margin-bottom: 43px;
+    margin-bottom: 47px;
   }
 
   .feedback__author-name {

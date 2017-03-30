@@ -6,9 +6,8 @@
   margin: auto;
 
   border: none;
- /* background-image: url("../img/???.svg");*/
+  background-image: url("../img/bg-zigzag-line.svg");
   background-size: 100% 7px;
-  background-color: #f1f1f1;
 
   @media #{$tablet} {
     min-height: 17px;
@@ -19,7 +18,8 @@
   @media #{$desktop} {
     min-height: 23px;
 
-    background-size: 100% 23px;
+    background-size: 1150px 23px;
+    background-repeat: repeat;
   }
 }
 
