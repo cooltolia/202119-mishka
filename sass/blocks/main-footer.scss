@@ -65,6 +65,7 @@
     flex-direction: row;
     align-items: center;
     min-height: 143px;
+    height: 1px; // для IE11
     padding: 0 50px;
   }
 
