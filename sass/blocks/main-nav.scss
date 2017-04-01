@@ -1,14 +1,17 @@
 .main-nav {
   position: absolute;
   z-index: 9;
+
   width: 100%;
-  background-color: #fff;
+
+  background-color: #ffffff;
+
   transition: transform 800ms ease;
 }
 
 .main-nav--nojs {
   position: relative;
-  top: 0px;
+  top: 0;
 }
 
 .main-nav--nojs ~ .menu-toggle {
@@ -19,13 +22,15 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .main-nav__item {
   height: 79px;
+
   border-top: 1px solid #ececec;
 }
 
@@ -34,24 +39,47 @@
 }
 
 .main-nav__link {
-  box-sizing: border-box;
   position: relative;
+
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding-left: 23.75%;
-  color: inherit;
+
+  color: $font-color-dark;
   text-decoration: none;
+
+  transition: color 300ms ease;
+
+  &[href]:hover {
+    color: rgba($font-color-dark, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba($font-color-dark, 0.3);
+  }
 }
 
 .main-nav__icon {
   position: absolute;
   top: 50%;
   left: 10%;
+
   transform: translateY(-50%);
 
-  fill-opacity: 0.2;
+  transition: fill 300ms ease, fill-opacity 300ms ease;
+
+  fill: #d3d2d2;
+}
+
+.main-nav__link:hover .main-nav__icon {
+  fill: #63d1bb;
+}
+
+.main-nav__link:active .main-nav__icon {
+  fill-opacity: 0.3;
 }
 
 @media #{$mobile-only} {
@@ -66,9 +94,10 @@
 
 @media #{$tablet} {
   .main-nav {
-    width: auto;
     position: relative;
     top: 0;
+
+    width: auto;
   }
 
   .main-nav__list {
@@ -80,13 +109,16 @@
   }
 
   .main-nav__item {
-    border-top-width: 0;
     min-height: 88px;
+
+    border-top-width: 0;
 
     &--search {
       width: 83px;
       padding: 0;
+
       font-size: 0;
+
       border-left: 1px solid #ececec;
     }
 
@@ -102,14 +134,13 @@
     &--cart {
       padding-left: 82px;
     }
-
   }
 
   .main-nav__icon {
-
     &--search {
-      left: 50%;
       top: 50%;
+      left: 50%;
+
       transform: translate(-50%, -50%);
     }
 
@@ -117,15 +148,14 @@
       left: 30px;
     }
   }
-
 }
 
 @media #{$desktop} {
   .main-nav {
-    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    width: 100%;
   }
 
   .main-nav__list {
@@ -140,14 +170,14 @@
   }
 
   .main-nav__item {
-
     &--catalog {
-      padding-left: 0;
       padding-right: 35px;
+      padding-left: 0;
     }
 
     &--form {
       padding-left: 35px;
+
       border-left: 1px solid #ececec;
     }
   }

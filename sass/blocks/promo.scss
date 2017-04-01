@@ -1,48 +1,52 @@
 .promo {
   @include container;
-  padding: 0 30px;
-  margin-bottom: 56px;
+
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 56px;
+  padding: 0 30px;
 
   font-family: $font-stack;
 }
 
 .promo__title {
   position: relative;
+
+  margin: 0;
   padding: 25px 30px 25px;
   padding-left: 90px;
-  margin: 0;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $font-color-dark;
 
   border: 1px solid #ececec;
 
-  color: $font-color-dark;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 24px;
-
   &::before {
-    content: '';
+    content: "";
     position: absolute;
+    top: 50%;
+    left: 33px;
+
     width: 32px;
     height: 32px;
-    left: 33px;
-    top: 50%;
-    transform: translateY(-50%);
 
-    background-image: url("/img/icon-video.svg");
+    background-image: url("../img/icon-video.svg");
     background-size: cover;
+    transform: translateY(-50%);
   }
 }
 
 .promo__video {
   position: relative;
+
   width: 100%;
   padding-top: 57.695%;
 
+  background-color: #62d1ba;
   background-image: url("../img/video-mobile@1x.jpg");
   background-size: cover;
-  background-color: #62d1ba;
 
   @media #{$retina} {
     background-image: url("../img/video-mobile@2x.jpg");
@@ -51,48 +55,73 @@
 
 .promo__video-control {
   position: absolute;
-  width: 102px;
-  height: 78px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
+  width: 102px;
+  height: 78px;
+
+  background-color: transparent;
+  background-image: url(../img/icon-play.svg);
+  background-size: cover;
   border: 0;
   outline: none;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
   cursor: pointer;
 
-  background-image: url(/img/icon-play.svg);
-  background-size: cover;
-  background-color: transparent;
+  transition: transform 300ms ease, opacity 300ms ease;
+
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.2) translate(-42%, -42%);
+  }
+
+  &:active {
+    transform: scale(0.8) translate(-65%, -60%);
+    opacity: 0.3;;
+  }
 }
 
 .promo__content {
   padding: 24px 34px 33px;
+
   border: 1px solid #ececec;
+
+  transition: box-shadow 200ms ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .promo__about {
   margin: 0;
   margin-bottom: 26px;
 
-  color: $font-color-light;
-  font-size: 13px;
   font-weight: normal;
+  font-size: 13px;
   line-height: 24px;
+  color: $font-color-light;
 }
 
 .promo__btn {
   @include btn;
-  margin: 0 auto;
-  width: 100%;
-  height: 52px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 52px;
+  margin: 0 auto;
 
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 @media #{$tablet} {
@@ -101,22 +130,24 @@
   }
 
   .promo__title {
-    font-size: 20px;
-    padding-left: 107px;
     padding-top: 36px;
+    padding-left: 107px;
 
-    border-bottom-width: 0px;
+    font-size: 20px;
+
+    border-bottom-width: 0;
 
     &::before {
       left: 42px;
+
       transform: translateY(-40%);
     }
   }
 
   .promo__video {
     order: -1;
-    padding-top: 0;
     height: 455px;
+    padding-top: 0;
 
     background-image: url("../img/video-tablet@1x.jpg");
 
@@ -131,7 +162,8 @@
 
   .promo__content {
     padding: 7px 40px 46px;
-    border-top-width: 0px;
+
+    border-top-width: 0;
   }
 
   .promo__about {
@@ -163,28 +195,37 @@
     box-sizing: border-box;
     width: 368px;
     padding-top: 95px;
-    padding-left: 77px;
     padding-right: 57px;
     padding-bottom: 33px;
+    padding-left: 77px;
 
     &::before {
-      left: 79px;
       top: 41px;
+      left: 79px;
+
       transform: translateY(0);
     }
   }
 
   .promo__video-control {
     transform: translate(-42%, -50%);
+
+    &:hover {
+      transform: scale(1.2) translate(-34%, -42%);
+    }
+
+    &:active {
+      transform: scale(0.8) translate(-50%, -60%);;
+    }
   }
 
   .promo__content {
     box-sizing: border-box;
     width: 368px;
     padding-top: 0;
-    padding-left: 77px;
     padding-right: 57px;
     padding-bottom: 59px;
+    padding-left: 77px;
   }
 
   .promo__about {

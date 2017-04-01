@@ -1,11 +1,12 @@
 .main-header {
   position: relative;
+
   width: 100%;
 
-  font-family: $font-stack;
-  font-size: 17px;
   font-weight: bold;
+  font-size: 17px;
   line-height: 24px;
+  font-family: $font-stack;
   color: $font-color-dark;
 }
 
@@ -20,14 +21,24 @@
 .main-header__logo {
   position: relative;
   z-index: 99;
-  width: 100%;
-  height: 79px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 79px;
 
-  background-color: #fff;
+  background-color: #ffffff;
 
+  transition: opacity 300ms ease;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__logo img {
@@ -64,10 +75,12 @@
 @media #{$desktop} {
   .main-header__logo {
     position: absolute;
-    width: 149px;
-    height: 72px;
     top: 50%;
     left: 50%;
+
+    width: 149px;
+    height: 72px;
+
     transform: translate(-50%, -50%);
   }
 }

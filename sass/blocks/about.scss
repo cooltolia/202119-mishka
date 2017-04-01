@@ -3,33 +3,37 @@
 
   box-sizing: border-box;
   width: 100%;
-  padding: 30px 30px 0;
   margin-bottom: 58px;
+  padding: 30px 30px 0;
 
-  font-family: $font-stack;
-  font-size: 17px;
   font-weight: bold;
+  font-size: 17px;
   line-height: 20px;
+  font-family: $font-stack;
 }
 
 .about__title {
   margin: 0;
   margin-bottom: 8px;
+
   font-size: 25px;
   line-height: 30px;
   text-align: left;
 }
 
 .about__list {
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .about__item {
-  width: 260px;
   position: relative;
+
+  width: 260px;
   padding-top: 82px;
+
   text-align: left;
 }
 
@@ -71,8 +75,8 @@
 
 @media #{$tablet} {
   .about {
-    padding-top: 50px;
     margin-bottom: 55px;
+    padding-top: 50px;
   }
 
   .about__title {
@@ -98,7 +102,6 @@
   }
 
   .about__item {
-
     &--1 {
       order: 0;
     }
@@ -108,7 +111,7 @@
     }
 
     &--3 {
-      order: 4
+      order: 4;
     }
 
     &--4 {
@@ -127,11 +130,11 @@
 
 @media #{$desktop} {
   .about {
-    padding-top: 60px;
     margin-bottom: 61px;
+    padding-top: 60px;
   }
 
-   .about__title {
+  .about__title {
     margin-left: 0;
     padding-left: 168px;
 

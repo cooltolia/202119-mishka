@@ -12,21 +12,21 @@
   margin: 0;
   margin-bottom: 24px;
 
-  color: $font-color-dark;
-  font-size: 25px;
   font-weight: bold;
+  font-size: 25px;
   line-height: 30px;
   text-align: left;
+  color: $font-color-dark;
 }
 
 .feedback__content {
   margin: 0;
   margin-bottom: 28px;
 
-  color: $font-color-light;
   font-weight: normal;
-  line-height: 30px;
   font-size: 15px;
+  line-height: 30px;
+  color: $font-color-light;
 }
 
 .feedback__author {
@@ -34,19 +34,19 @@
 }
 
 .feedback__author-name {
-  color: $font-color-dark;
-  font-size: 18px;
   font-weight: bold;
+  font-size: 18px;
   line-height: 24px;
   text-align: left;
+  color: $font-color-dark;
 }
 
 .feedback__author-nic {
-  color: $font-color-light;
-  font-size: 17px;
   font-weight: normal;
+  font-size: 17px;
   line-height: 30px;
   text-align: left;
+  color: $font-color-light;
 }
 
 .feedback__controls {
@@ -59,15 +59,16 @@
 
 .feedback__control {
   position: relative;
+
   width: 50%;
   height: 52px;
 
+  font-size: 0;
+
+  background-color: #ffffff;
   border: none;
   outline: none;
-  background-color: #fff;
   cursor: pointer;
-
-  font-size: 0;
 
   &:first-child {
     border-right: 1px solid #ececec;
@@ -76,48 +77,59 @@
 
 .feedback__icon {
   position: absolute;
-  width: 51px;
-  height: 26px;
   top: 50%;
   left: 50%;
+
+  width: 51px;
+  height: 26px;
+
   transform: translate(-50%, -50%);
+
+  transition: fill-opacity 300ms ease;
+}
+
+.feedback__control:hover .feedback__icon {
+  fill-opacity: 0.6;
+}
+
+.feedback__control:active .feedback__icon {
+  fill-opacity: 0.3;
 }
 
 .feedback__btn {
   @include btn;
 
-  height: 52px;
-  margin-bottom: 44px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 52px;
+  margin-bottom: 44px;
 
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 @media #{$tablet} {
   .feedback {
-    padding-top: 79px;
-    margin-bottom: 68px;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
+    margin-bottom: 68px;
+    padding-top: 79px;
 
     background-image: url(../img/review@1x.jpg);
-    background-size: 350px 100%;
     background-repeat: no-repeat;
     background-position: top left;
+    background-size: 350px 100%;
 
     @media #{$retina} {
-      background-image: url(../img/review@2x.jpg)
+      background-image: url(../img/review@2x.jpg);
     }
   }
 
   .feedback__title {
-    width: 50%;
     order: -2;
+    width: 50%;
     margin-bottom: 49px;
     margin-left: -5px;
 
@@ -146,6 +158,7 @@
   .feedback__controls {
     width: 167px;
     margin-left: auto;
+
     border: none;
   }
 
@@ -154,9 +167,9 @@
   }
 
   .feedback__btn {
+    order: -1;
     width: 175px;
     margin-left: auto;
-    order: -1;
   }
 }
 
@@ -168,14 +181,15 @@
   .feedback__title {
     margin-top: -10px;
     padding-left: 175px;
+
     font-size: 53px;
     line-height: 57px;
   }
 
   .feedback__content {
     margin-bottom: 41px;
-    padding-left: 175px;
     padding-right: 100px;
+    padding-left: 175px;
   }
 
 
@@ -184,9 +198,8 @@
   }
 
   .feedback__author {
-    padding-left: 175px;
     width: 350px;
     margin-bottom: 96px;
+    padding-left: 175px;
   }
 }
-
