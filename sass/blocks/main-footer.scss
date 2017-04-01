@@ -7,9 +7,9 @@
 .main-footer__inner {
   @include container;
 
-  padding: 0 30px;
   display: flex;
   flex-flow: column nowrap;
+  padding: 0 30px;
 }
 
 .main-footer__logo {
@@ -18,16 +18,16 @@
 
 .main-footer__socials {
   height: 79px;
+
   border-bottom: 1px solid #e5e5e5;
 }
 
 .main-footer__copyright {
-  height: 80px;
-
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 80px;
 
   text-decoration: none;
 
@@ -41,18 +41,19 @@
 .main-footer__copyright-title {
   margin-right: 30px;
 
-  color: $font-color-dark;
-  font-size: 19px;
   font-weight: bold;
+  font-size: 19px;
   line-height: 18px;
+  color: $font-color-dark;
 }
 
 .main-footer__copyright-logo {
   width: 27px;
   height: 34px;
-  fill: #63d1bb;
 
   transition: fill 300ms ease;
+
+  fill: #63d1bb;
 }
 
 .main-footer__copyright:hover .main-footer__copyright-logo {
@@ -61,11 +62,10 @@
 
 @media #{$tablet} {
   .main-footer__inner {
+    flex-direction: row;
+    align-items: center;
     min-height: 143px;
     padding: 0 50px;
-
-    align-items: center;
-    flex-direction: row;
   }
 
   .main-footer__logo {
@@ -95,7 +95,7 @@
 }
 
 @media #{$desktop} {
-   .main-footer__logo {
-     margin-right: 33.24%;
+  .main-footer__logo {
+    margin-right: 33.24%;
   }
 }

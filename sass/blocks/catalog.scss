@@ -1,8 +1,9 @@
 .catalog {
   @include container;
-  padding: 30px 30px 0;
+
   display: flex;
   flex-flow: column nowrap;
+  padding: 30px 30px 0;
 
   font-family: $font-stack;
 }

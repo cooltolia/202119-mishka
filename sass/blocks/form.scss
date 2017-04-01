@@ -8,13 +8,13 @@
 .form__intro {
   @include container;
 
-  padding: 0 30px;
   margin-bottom: 23px;
+  padding: 0 30px;
 
-  color: $font-color-light;
-  font-size: 13px;
   font-weight: normal;
+  font-size: 13px;
   line-height: 24px;
+  color: $font-color-light;
 }
 
 .form__wrapper {
@@ -24,8 +24,8 @@
 .form__fieldset {
   @include container;
 
-  padding: 0 30px;
   margin-bottom: 42px;
+  padding: 0 30px;
 
   &--textarea {
     margin-bottom: 12px;
@@ -46,30 +46,32 @@
 
 .form__legend {
   position: relative;
+
   margin: 0;
 
-  color: #63d1bb;
-  font-size: 17px;
   font-weight: bold;
+  font-size: 17px;
   line-height: 16px;
+  color: #63d1bb;
   text-transform: uppercase;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
-
-
-    height: 1px;
-    width: calc(100% - 62px);
     top: 50%;
     left: 62px;
+
+    width: calc(100% - 62px);
+    height: 1px;
+
     background-color: currentColor;
   }
 
   &--shorter::after {
-     width: calc(100% - 81px);
-     left: 81px;
-    }
+    left: 81px;
+
+    width: calc(100% - 81px);
+  }
 }
 
 .form__field {
@@ -81,7 +83,7 @@
     margin-top: 7px;
   }
 
-   &--email {
+  &--email {
     margin-top: 7px;
   }
 }
@@ -115,13 +117,14 @@ input[type="checkbox"] {
 
 .form__label {
   position: relative;
+
   width: 200px;
   padding-top: 11px;
 
-  color: $font-color-dark;
-  font-size: 17px;
   font-weight: 700;
+  font-size: 17px;
   line-height: 18px;
+  color: $font-color-dark;
 
   cursor: pointer;
 
@@ -129,13 +132,14 @@ input[type="checkbox"] {
     padding-left: 62px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
 
       width: 35px;
       height: 35px;
+
       border: 2px solid $font-color-light;
       border-radius: 50%;
 
@@ -143,13 +147,14 @@ input[type="checkbox"] {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 12px;
       left: 12px;
 
       width: 16px;
       height: 16px;
+
       background-color: transparent;
       border-radius: 50%;
 
@@ -169,30 +174,33 @@ input[type="checkbox"] {
     padding-left: 62px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
 
       width: 36px;
       height: 36px;
+
       border: 2px solid $font-color-light;
 
       transition: border-color 300ms ease;
     }
 
-     &::after {
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
-      width: 7px;
-      height: 16px;
       top: 8px;
       left: 16px;
+
+      width: 7px;
+      height: 16px;
 
       border: transparent;
       border-right: 3px solid transparent;
       border-bottom: 3px solid transparent;
       transform: rotate(45deg);
+
       transition: border-right-color 300ms ease, border-bottom-color 300ms ease;
     }
 
@@ -206,10 +214,10 @@ input[type="checkbox"] {
   }
 
   &--text {
-    padding: 0;
     width: auto;
     margin-right: 42px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -230,23 +238,23 @@ input[type="checkbox"] {
   height: 52px;
   padding-right: 35px;
 
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 18px;
+  color: $font-color-light;
+
+  background-color: transparent;
   border: 0;
   border-bottom: 2px solid $font-color-dark;
   outline: 0;
-  background-color: transparent;
-
-  color: $font-color-light;
-  font-size: 17px;
-  font-weight: normal;
-  line-height: 18px;
 
   transition: border-color 300ms ease;
 
   &::placeholder {
-    color: rgba($font-color-light, 0.3);
-    font-size: 17px;
     font-weight: normal;
+    font-size: 17px;
     line-height: 18px;
+    color: rgba($font-color-light, 0.3);
   }
 }
 
@@ -262,12 +270,13 @@ input[type="checkbox"] {
 .form__icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 6px;
 
-  fill: rgba(#000, 0.2);
+  transform: translateY(-50%);
 
   transition: fill 300ms ease;
+
+  fill: rgba(#000000, 0.2);
 
   &--phone {
     width: 25px;
@@ -292,24 +301,24 @@ input[type="checkbox"] {
   width: 100%;
   max-width: 100%;
   min-height: 142px;
-  padding: 16px;
   margin-top: 23px;
+  padding: 16px;
+
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 18px;
+  color: $font-color-light;
 
   border: 2px solid $font-color-light;
   outline: none;
 
-  color: $font-color-light;
-  font-size: 19px;
-  font-weight: normal;
-  line-height: 18px;
-
   transition: border-color 300ms ease;
 
   &::placeholder {
-    color: rgba($font-color-light, 0.3);
-    font-size: 19px;
     font-weight: normal;
+    font-size: 19px;
     line-height: 18px;
+    color: rgba($font-color-light, 0.3);
   }
 
   &:hover {
@@ -331,21 +340,20 @@ input[type="checkbox"] {
   display: block;
   margin-bottom: 30px;
 
-  color: $font-color-light;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 16px;
+  color: $font-color-light;
 }
 
 .form__submit {
   @include btn;
 
-  width: 100%;
-  height: 52px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 52px;
 
   text-transform: uppercase;
 }
@@ -357,8 +365,8 @@ input[type="checkbox"] {
   }
 
   .form__intro {
-    padding-right: 105px;
     margin-bottom: 4px;
+    padding-right: 105px;
 
     font-size: 17px;
     line-height: 30px;
@@ -403,11 +411,11 @@ input[type="checkbox"] {
   }
 
   .form__legend {
-    width: 167px;
     flex: 0 0 167px;
+    width: 167px;
 
     &::after {
-      height: 0px;
+      height: 0;
     }
   }
 
@@ -422,14 +430,13 @@ input[type="checkbox"] {
   }
 
   .form__input {
-
     &--radio {
       margin-bottom: 57px;
     }
 
     &--checkbox {
-      margin-bottom: 58px;
       width: 47%;
+      margin-bottom: 58px;
 
       &:nth-child(5) {
         margin-bottom: 0;
@@ -449,7 +456,7 @@ input[type="checkbox"] {
 
   .form__label {
     width: 100%;
-    padding-top: 0px;
+    padding-top: 0;
 
     font-size: 19px;
 
@@ -542,7 +549,7 @@ input[type="checkbox"] {
 @media #{$desktop} {
   .form {
     padding-top: 124px;
-   }
+  }
 
   .form__intro {
     padding-right: 250px;
@@ -550,21 +557,19 @@ input[type="checkbox"] {
   }
 
   .form__wrapper {
-
     &--short {
       padding-top: 51px;
     }
   }
 
   .form__legend {
+    flex: 0 0 175px;
     box-sizing: border-box;
     width: 175px;
-    flex: 0 0 175px;
     padding-left: 62px;
   }
 
   .form__input {
-
     &--checkbox {
       width: 244px;
       margin-right: 20px;
@@ -580,7 +585,6 @@ input[type="checkbox"] {
   }
 
   .form__fieldset {
-
     &--textarea {
       margin-bottom: 10px;
     }
@@ -594,11 +598,10 @@ input[type="checkbox"] {
   }
 
   .form__icon {
-    right: 0px;
+    right: 0;
   }
 
   .form__footer {
     padding: 0 225px;
   }
 }
-

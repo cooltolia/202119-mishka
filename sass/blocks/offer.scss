@@ -1,23 +1,23 @@
 .offer {
   @include container;
 
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0 30px;
-  margin-bottom: 30px;
   display: flex;
   flex-flow: column nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 30px;
 
-  font-family: $font-stack;
   font-weight: normal;
+  font-family: $font-stack;
   color: $font-color-light;
 }
 
 
 .offer__header {
   box-sizing: border-box;
-  padding-top: 28px;
   margin-bottom: 21px;
+  padding-top: 28px;
 
   font-weight: bold;
   text-align: left;
@@ -27,18 +27,18 @@
   display: block;
   margin-bottom: 5px;
 
-  color: $font-color-dark;
   font-size: 25px;
   line-height: 30px;
+  color: $font-color-dark;
 }
 
 .offer__subtitle {
   display: block;
 
-  color: #63d1bb;
+  font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  font-weight: bold;
+  color: #63d1bb;
   text-transform: uppercase;
 }
 
@@ -52,22 +52,23 @@
 
 .offer__features {
   width: 100%;
+  margin-bottom: 28px;
 
+  border-collapse: collapse;
+  border-spacing: 0;
   font-size: 15px;
   line-height: 20px;
-  margin-bottom: 28px;
-  border-spacing: 0;
-  border-collapse: collapse;
 }
 
 .offer__row {
   height: 39px;
+
   border-bottom: 1px solid #ececec;
 }
 
 .offer__cell {
-  text-align: left;
   vertical-align: middle;
+  text-align: left;
 
   &:first-child {
     width: 38%;
@@ -88,46 +89,48 @@
 }
 
 .offer__price {
+  margin-bottom: 27px;
+
   font-weight: bold;
   font-size: 17px;
   text-align: center;
-  margin-bottom: 27px;
 }
 
 .offer__btn {
   @include btn;
-  height: 52px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 52px;
 
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 @media #{$tablet} {
   .offer {
-//    max-width: 950px;
+    //    max-width: 950px;
     margin-bottom: 52px;
   }
 
   .offer__header {
     position: relative;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 46px;
     margin-bottom: 48px;
+    padding-top: 46px;
   }
 
   .offer__title {
-    font-size: 43px;
-    line-height: 50px;
-
     margin-bottom: 0;
     margin-left: -3px;
+
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .offer__subtitle {
@@ -142,7 +145,6 @@
   .offer__content {
     display: flex;
     flex-flow: column wrap;
-
     height: 412px; // высота правой колонки/картинки (включая margin)
   }
 
@@ -155,7 +157,6 @@
   }
 
   .offer__cell {
-
     &:first-child {
       width: 33%;
     }
@@ -176,9 +177,9 @@
   }
 
   .offer__img {
+    order: 1;
     width: 333px;
     height: 404px;
-    order: 1;
     margin: 0;
     margin-top: 8px;
     margin-left: auto;
@@ -191,12 +192,12 @@
   }
 
   .offer__header {
-    padding: 0;
-    margin-bottom: 10px;
-    padding-left: 47px;
-    justify-content: flex-start;
-
     top: 123px;
+
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-left: 47px;
   }
 
   .offer__title {
@@ -232,8 +233,8 @@
   }
 
   .offer__price {
-    padding-left: 7px;
     margin-bottom: 34px;
+    padding-left: 7px;
   }
 
   .offer__btn {
@@ -243,7 +244,6 @@
   .offer__img {
     width: 525px;
     height: 636px;
-
     margin-top: 4px;
   }
 }
