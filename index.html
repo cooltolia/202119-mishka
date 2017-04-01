@@ -199,7 +199,7 @@
       <div class="contacts__content">
         <div class="contacts__row">
           <div class="contacts__data">e-mail:</div>
-          <div class="contacts__data contacts__data--underline">info@mimimishkashop.ru</div>
+          <a class="contacts__data contacts__data--underline" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </div>
         <div class="contacts__row">
           <div class="contacts__data">aдрес:</div>
@@ -214,9 +214,9 @@
 
   <footer class="main-footer">
     <div class="main-footer__inner">
-      <div class="main-footer__logo">
-        <img src="img/logo-footer.svg" width="102" height="34" alt="Logo">
-      </div>
+      <svg class="main-footer__logo" width="102" height="34">
+        <use xlink:href="img/map.svg#logo-footer"></use>
+      </svg>
       <div class="main-footer__socials socials">
         <a class="socials__link" href="#">
           <svg class="socials__icon" width="22" height="21">

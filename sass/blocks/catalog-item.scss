@@ -22,9 +22,20 @@
   flex-flow: column nowrap;
 
   border: 1px solid #ececec;
+
+  transition: box-shadow 200ms ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-item__title {
+  display: block;
   margin: 0;
   margin-bottom: 6px;
 
@@ -32,7 +43,18 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
+  text-decoration: none;
   text-align: left;
+
+  transition: opacity 300ms ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-item__desc {
@@ -79,7 +101,18 @@
 }
 
 .catalog-item__icon {
-  fill-opacity: 0.2;
+  fill: #d3d2d2;
+
+  transition: fill 300ms ease;
+}
+
+.catalog-item__add:hover .catalog-item__icon {
+  fill: #63d1bb;
+  fill-opacity: 1;
+}
+
+.catalog-item__add:active .catalog-item__icon {
+  fill-opacity: 0.3;
 }
 
 @media #{$tablet} {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title></title>
+  <title>Каталог товаров Мишки</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -84,7 +84,7 @@
           </picture>
         </a>
         <div class="catalog-item__content">
-          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+          <a class="catalog-item__title js-order" href="#">Зайчик-попрыгайчик</a>
           <p class="catalog-item__desc">Рост 30 см, вес 200 г</p>
           <div class="catalog-item__footer">
             <span class="catalog-item__price">1 200 руб.</span>
@@ -106,7 +106,7 @@
           </picture>
         </a>
         <div class="catalog-item__content">
-          <h2 class="catalog-item__title">Корзинка для белья</h2>
+          <a class="catalog-item__title js-order" href="#">Корзинка для белья</a>
           <p class="catalog-item__desc">Диаметр 15 см, высота 10 см</p>
           <div class="catalog-item__footer">
             <span class="catalog-item__price">690 руб.</span>
@@ -128,7 +128,7 @@
           </picture>
         </a>
         <div class="catalog-item__content">
-          <h2 class="catalog-item__title">Большая корзинка для&nbsp;игрушек</h2>
+          <a class="catalog-item__title js-order" href="#">Большая корзинка для&nbsp;игрушек</a>
           <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
           <div class="catalog-item__footer">
             <span class="catalog-item__price">1 500 руб.</span>
@@ -156,9 +156,9 @@
 
  <footer class="main-footer">
     <div class="main-footer__inner">
-      <div class="main-footer__logo">
-        <img src="img/logo-footer.svg" width="102" height="34" alt="Logo">
-      </div>
+      <svg class="main-footer__logo" width="102" height="34">
+        <use xlink:href="img/map.svg#logo-footer"></use>
+      </svg>
       <div class="main-footer__socials socials">
         <a class="socials__link" href="#">
           <svg class="socials__icon" width="22" height="21">

@@ -28,6 +28,15 @@
 
   background-color: #fff;
 
+  transition: opacity 300ms ease;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+  
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__logo img {

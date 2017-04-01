@@ -64,11 +64,34 @@
   background-image: url(/img/icon-play.svg);
   background-size: cover;
   background-color: transparent;
+
+  will-change: transform;
+  transition: transform 300ms ease, opacity 300ms ease;
+  transform-origin: center;
+
+  &:hover {
+    transform: scale(1.2) translate(-42%, -42%);
+  }
+
+  &:active {
+    transform: scale(0.8) translate(-65%, -60%);;
+    opacity: 0.3;
+  }
 }
 
 .promo__content {
   padding: 24px 34px 33px;
   border: 1px solid #ececec;
+
+  transition: box-shadow 200ms ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .promo__about {
@@ -176,6 +199,14 @@
 
   .promo__video-control {
     transform: translate(-42%, -50%);
+
+    &:hover {
+      transform: scale(1.2) translate(-34%, -42%);
+    }
+
+    &:active {
+      transform: scale(0.8) translate(-50%, -60%);;
+    }
   }
 
   .promo__content {

@@ -81,6 +81,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  transition: fill-opacity 300ms ease;
+}
+
+.feedback__control:hover .feedback__icon {
+  fill-opacity: 0.6;
+}
+
+.feedback__control:active .feedback__icon {
+  fill-opacity: 0.3;
 }
 
 .feedback__btn {
