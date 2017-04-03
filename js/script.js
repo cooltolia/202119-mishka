@@ -1,10 +1,6 @@
 var nav = document.querySelector(".main-nav");
 var hamburger = document.querySelector(".menu-toggle");
 var order = document.querySelectorAll(".js-order");
-var modal = document.querySelector(".modal");
-var modalClose = modal.querySelector(".modal__btn")
-var body = document.querySelector("body");
-var overlay = document.querySelector(".modal-overlay");
 
 nav.classList.remove("main-nav--nojs");
 nav.classList.add("main-nav--closed");
@@ -15,6 +11,10 @@ hamburger.addEventListener("click", function (event) {
   hamburger.classList.toggle("menu-toggle--close");
 });
 
+var modal = document.querySelector(".modal");
+var modalClose = modal.querySelector(".modal__btn")
+var body = document.querySelector("body");
+var overlay = document.querySelector(".modal-overlay");
 
 [].forEach.call(order, function (order) {
   order.addEventListener("click", function (event) {
