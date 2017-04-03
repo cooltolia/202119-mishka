@@ -2,7 +2,7 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var csscomb = require('gulp-csscomb');
+var csscomb = require("gulp-csscomb");
 var imagemin = require("gulp-imagemin");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -13,8 +13,8 @@ var rename = require ("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var server = require("browser-sync").create();
-var run = require('run-sequence');
-var del = require('del');
+var run = require("run-sequence");
+var del = require("del");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -35,20 +35,20 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function() {
-  return gulp.src("buld/img/**/*.{png,jpg,gif}")
+  return gulp.src("build/img/**/*.{png,jpg,JPG,gif}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
-    ])) 
+    ]))
     .pipe(gulp.dest("build/img"))
-  
+
 });
 
 gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/*.svg") 
+  return gulp.src("build/img/icons/*.svg")
     .pipe(svgmin({
       plugins: [{
-        removeAttrs: {attrs: 'fill'}
+        removeAttrs: {attrs: "fill"}
       }]
     }))
     .pipe(svgstore({
@@ -102,8 +102,8 @@ gulp.task("build", function(fn) {
     "clean",
     "copy",
     "style",
-    "images", 
-    "symbols", 
+    "images",
+    "symbols",
     fn
   );
 });
